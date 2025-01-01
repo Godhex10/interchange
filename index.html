@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><img id="theme-image" class="theme-image" src="./images/light.png" width="130px" alt="" srcset=""></div>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="header-content" id="header-content">
+                <nav>
+                    <div class="navbar">
+                        <a href="#">Features</a>
+                        <a href="#">How it works</a>
+                        <a href="#">Supported Chains</a>
+                        <a href="#">Join Community</a>
+                        
+                    </div>
+                </nav>
+                <div class="header-btn">
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    
+                    <button class="in">Launch Dapp</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="wrapper">
+              <div class="content">
+                <h2 class="hero__title">Seamless Cross-Chain Transfers</h2>
+                <p class="hero__text">InterChain enables you transfer assets between blockchains quickly and securely</p>
+                <a class="hero__btn content__btn--primary" target="_blank" href="#">Get Started</a>
+                <a class="hero__btn content__btn--secondary" target="_blank" href="#">Learn More</a>
+              </div>
+              
+              <div class="image-wrapper">
+                <img class="hero__img" src="./images/chain.png" alt="chain">
+              </div>
+            </div>
+          </section>
+
+
+          <section class="features-section">
+            <div class="features-title">
+                <h5>Features</h5>
+              <h1>Interchain<br>Key<br>Features</h1>
+            </div>
+            <div class="features-grid">
+              <div class="feature-card">
+                <img src="./images/blockchain.png" alt="Icon" class="feature-icon">
+                <h3>Supports multiple blockchains</h3>
+                <p>InterChain bridges blockchain ecosystems like Ethereum, Solana, and Polygon, enabling seamless token transfers across different networks.</p>
+              </div>
+              <div class="feature-card">
+                <img src="./images/deadline.png" alt="Icon" class="feature-icon">
+                <h3>Speed and efficiency</h3>
+                <p>Swift transactions and competitive fees make InterChain the ideal choice for efficient cross-chain transfers.</p>
+              </div>
+              <div class="feature-card">
+                <img src="./images/security.png" alt="Icon" class="feature-icon">
+                <h3>Security and privacy</h3>
+                <p>Advanced security measures ensure your assets are protected with multi-signature wallets and encryption protocols.</p>
+              </div>
+              <div class="feature-card">
+                <img src="./images/responsive.png" alt="Icon" class="feature-icon">
+                <h3>User-friendly interface</h3>
+                <p>Easily navigate cross-chain transactions with InterChain’s intuitive and accessible platform design.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="how-it-works">
+            <div class="image-container">
+              <img src="./images/frame2.png" alt="Checklist illustration" class="illustration">
+            </div>
+            <div class="text-container">
+              <h4>How it works</h4>
+              <h2>How to use InterChain</h2>
+              <div class="steps">
+                <div class="step">
+                  <img src="./images/Frame-14.png" alt="Wallet Icon" class="step-icon">
+                  <div>
+                    <strong>Connect Wallet</strong> - Begin by connecting your preferred Web3 wallet, such as MetaMask or Trust Wallet, to our platform.
+                  </div>
+                </div>
+                <div class="step">
+                  <img src="./images/Frame-15.png" alt="Chains Icon" class="step-icon">
+                  <div>
+                    <strong>Select Chains</strong> - Choose the blockchain networks involved in your transaction.
+                  </div>
+                </div>
+                <div class="step">
+                  <img src="./images/Frame-16.png" alt="Transfer Icon" class="step-icon">
+                  <div>
+                    <strong>Confirm Transfer</strong> - Review the transaction details, including token amounts, fees, and destination addresses. Once confirmed, our secure cross-chain bridge initiates the transfer, ensuring your assets move swiftly and securely.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

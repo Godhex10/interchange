@@ -1,0 +1,243 @@
+/* styles.css */
+/* styles.css */
+
+/* Default (Light Mode) Colors */
+:root {
+    --bg-color: #FFFFFF;
+    --text-color: #2F2F2FCC;
+    --primary-color: #5E3AC0;
+    --secondary-color: #ff6347;
+    --accent-color: #EFECF9;
+    --button-bg: #5E3AC0;
+    --button-text: #EDEDED;
+}
+
+/* Dark Mode Colors */
+body.dark-mode {
+    --bg-color: #100823;
+    --text-color: #FFFFFFCC;
+    --primary-color: #5E3AC0;
+    /* Same color as light mode */
+    --secondary-color: #ff4500;
+    --accent-color: #FFFFFF1A;
+    --button-bg: #5E3AC0;
+    --button-text: #FFFFFF;
+}
+
+body[data-theme="light"] .theme-image {
+    content: url('./images/light.png');
+  }
+  
+  body[data-theme="dark"] .theme-image {
+    content: url('./images/dark.png');
+  }
+
+body{
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--bg-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    font-family: "DM Sans", serif;
+}
+
+
+
+nav {
+    display: flex;
+    flex: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: "DM Sans", serif;
+}
+
+.navbar a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: "DM Sans", serif;
+}
+
+.navbar a:hover {
+    color: #628DFB;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -30px;
+    padding-right: 50px;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    width: 150px;
+    padding: 5px 30px 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #666;
+    pointer-events: none;
+}
+
+.header-btn button {
+    background: var(--button-bg);
+    border: none;
+    padding: 8px 16px;
+    color: var(--button-text);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.header-btn button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .header-content {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        background-color: #fff;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content.open {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+    }
+
+    .search-container input {
+        width: 100%;
+    }
+
+    .header-btn {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Ensures the navbar links are centered in desktop view */
+@media (min-width: 768px) {
+    header {
+        justify-content: center;
+        /* Centers all content */
+    }
+
+    .navbar {
+        flex: 1;
+        justify-content: center;
+        /* Center the navbar links */
+        gap: 20px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50px;
+        /* Position logo on the left */
+    }
+
+    .header-btn {
+        position: absolute;
+        right: 20px;
+        /* Position sign in and search on the right */
+    }
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--button-bg);
+}
+
+input:checked+.slider:before {
+    transform: translateX(25px);
+}
