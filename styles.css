@@ -737,3 +737,125 @@ input:checked+.slider:before {
       font-size: 0.9rem;
     }
   }
+
+
+
+
+  /* Footer Styling */
+.footer {
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    width: 100%; /* Ensure footer spans full width of the viewport */
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-column {
+    flex: 1 1 200px;
+    margin: 10px;
+  }
+  
+  .footer-logo {
+    font-size: 1.5rem;
+    color: var(--hero-color);
+    margin-bottom: 10px;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--hero-color);
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column ul li a:hover {
+    color: #7a5aff;
+  }
+  
+  .newsletter-form {
+    margin-top: 20px;
+  }
+  
+  .newsletter-form label {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .newsletter-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .newsletter-input input {
+    padding: 10px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .newsletter-input button {
+    background-color: #7a5aff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter-input button:hover {
+    background-color: #5a3dcc;
+  }
+  
+  .footer p {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 20px;
+  }
+  
+  /* Socials in List Format */
+  .footer-column ul {
+    display: block; /* Ensure it's a vertical list */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-column {
+      text-align: center;
+    }
+  
+    .newsletter-input {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
